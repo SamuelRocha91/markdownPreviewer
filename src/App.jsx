@@ -4,7 +4,12 @@ function App() {
 
   return (
     <>
-    <h1>Hello World</h1>
+    <div>
+        <textarea name="" id="editor" cols="30" rows="10"></textarea>
+        <div>
+          <p id="preview"></p>
+        </div>  
+    </div>
     </>
   )
 }
