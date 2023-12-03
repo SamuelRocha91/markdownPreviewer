@@ -1,13 +1,23 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+  const [text, setText] = useState('')
 
   return (
     <>
     <div>
-        <textarea name="" id="editor" cols="30" rows="10"></textarea>
+        <textarea
+          name="textToMark"
+          id="editor"
+          cols="30"
+          rows="10"
+          value={text}
+          onChange={(event) => setText(event.target.value)}
+        >
+        </textarea>
         <div>
-          <p id="preview"></p>
+          <p id="preview">{ text }</p>
         </div>  
     </div>
     </>
