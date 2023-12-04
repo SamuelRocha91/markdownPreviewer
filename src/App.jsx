@@ -1,8 +1,15 @@
 import { useState } from 'react'
 import './App.css'
+import { data } from './utils/data'
+import { marked } from 'marked';
+
+
 
 function App() {
-  const [text, setText] = useState('')
+  const [text, setText] = useState(data)
+  const options = { breaks: true};
+  const html = marked(text, options)
+
 
   return (
     <>
@@ -16,8 +23,7 @@ function App() {
           onChange={(event) => setText(event.target.value)}
         >
         </textarea>
-        <div>
-          <p id="preview">{ text }</p>
+        <div id="preview"  dangerouslySetInnerHTML={{ __html: html }}>
         </div>  
     </div>
     </>
