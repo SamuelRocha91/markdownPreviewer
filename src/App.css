@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+textarea {
+  width: 50%;
+}
+
+#preview {
+  border: 1px solid black;
+  box-shadow: 1px 2px 3px black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+pre {
+  background-color: aliceblue;
+}
+
+code {
+  background-color: aqua;
+}
+
+blockquote {
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+}
